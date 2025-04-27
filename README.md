@@ -1,5 +1,9 @@
 # PersonelAtamaSistemi
-Kocaeli Üniversiteis Akademik Personel Atama Sistemi
+
+Bu proje, Kocaeli Üniversitesi için geliştirilen bir Akademik Personel Başvuru Sistemi'dir.
+Sistem, akademik personel adaylarının ilgili kadrolara başvuru yapmasını, başvuruların yönetilmesini ve değerlendirilmesini dijital bir platform üzerinden güvenli ve hızlı bir şekilde sağlar.
+Yönetici ve admin kullanıcıları ilanlar ve başvuru kriterleri üzerinde tam kontrol sahibidir.Yöneticiler, değerlendirme yapacak juri adaylarını seçerler ve nihai kararı verirler.
+Jüri üyeleri adayların yüklediği belgeleri inceleyerek değerlendirme yaparlar.
 
 ## Kullanılan Teknolojiler
 Frontend: React.js 
