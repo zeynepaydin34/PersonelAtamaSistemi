@@ -40,6 +40,8 @@ Sistem, dört temel kullanıcı rolüne sahiptir:
 3. Adayların sunduğu belgeler ve puanlar otomatik hesaplanır.
    
 <img width="761" alt="project-image-2" src="https://github.com/user-attachments/assets/7f0d335e-6215-4fd9-a7b8-4c47865c1228" />
+
+
 Şekil-1 Yöneticilerin kriterleri görüntüleyip düzenleyebilme yetkisi bulunmaktadır.
 
 ### Jüri Üyesi Paneli
