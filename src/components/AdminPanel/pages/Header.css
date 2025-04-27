@@ -1,0 +1,47 @@
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #34495e;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 1000; /* Sidebar'ın üstüne çıkmasını engellemek için yüksek değer */
+}
+
+.header-left h2 {
+  margin: 0;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #7f8c8d;
+}
+
+.header-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.notification-icon,
+.logout-icon {
+  cursor: pointer;
+}
+
+.notification-icon:hover,
+.logout-icon:hover {
+  color: #bdc3c7;
+}
+
+/* İçeriğin header'ın altında görünmesi için */
+body, .content {
+  padding-top: 60px;
+}

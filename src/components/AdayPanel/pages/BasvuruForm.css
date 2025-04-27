@@ -1,0 +1,128 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+}
+
+.basvuru-page {
+  width: 100%;
+}
+
+/* Navbar (fixed at the top) */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  z-index: 1000;
+  text-align: center;
+}
+
+/* Form Konteyneri */
+.form-container {
+  max-width: 500vh;
+  margin: 80px auto 0 auto; /* Added margin-top to prevent overlap with navbar */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 85vh; /* Adjusted max-height */
+  overflow-y: auto; /* Allows scrolling only when necessary */
+  padding-bottom: 40px; /* Space at the bottom */
+  width: 90vh;
+}
+
+/* Başlık */
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Wrapper */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form elements */
+}
+
+/* Belgeler Listesi */
+.belge-listesi {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Her Belgeyi Stilize Etme */
+.belge-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eee;
+}
+
+/* Belge Adı Etiketi */
+.belge-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Dosya Seçme Input */
+.belge-item input[type="file"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Dosya Listesi */
+.dosya-listesi {
+  padding: 5px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Dosya Adı */
+.dosya-adi {
+  margin: 5px 0;
+}
+
+/* Başvuru Butonu */
+.submit-button {
+  padding: 15px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+/* Başarı Mesajı */
+.success-message {
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+}
+
+/* Hata Mesajı */
+.error-message {
+  margin-top: 20px;
+  color: red;
+  font-weight: bold;
+}

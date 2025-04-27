@@ -1,0 +1,104 @@
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+  /* Sidebar */
+  .sidebar {
+    width: 200px; /* Daha küçük ekranlar için sidebar genişliğini küçültüyoruz */
+  }
+
+  /* Header */
+  .header {
+    left: 200px; /* Header'ın konumunu sidebar'a göre ayarlıyoruz */
+    width: calc(100% - 200px); /* Header'ın genişliğini sidebar'a göre ayarlıyoruz */
+  }
+
+  .main-content {
+    margin-left: 200px; /* Sidebar'ı göz önünde bulunduruyoruz */
+    width: calc(100% - 200px); /* Main content genişliği */
+  }
+
+  /* Statistik Kartları */
+  .stats-cards {
+    grid-template-columns: 1fr 1fr; /* İki kartlı düzeni sağlayalım */
+  }
+
+  /* Tables */
+  .tables-container {
+    width: 100%;
+    max-width: 100%; /* Tabloları %100 genişlikte yapıyoruz */
+    margin-left: 0;
+  }
+
+  .table-content {
+    font-size: 14px; /* Mobilde fontları küçültüyoruz */
+  }
+
+  .card {
+    flex: 1;
+    min-width: 48%; /* Kartların minimum genişliğini %48 yapıyoruz */
+    max-width: 48%; /* Kartları daha geniş yapıyoruz */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Sidebar */
+  .sidebar {
+    width: 100%; /* Mobilde sidebar'ı üst kısma taşıyoruz */
+    position: relative;
+    height: auto;
+    z-index: 1;
+  }
+
+  /* Header */
+  .header {
+    left: 0; /* Header'ı sidebar ile hizalayalım */
+    width: 100%; /* Header genişliğini %100 yapıyoruz */
+  }
+
+  .main-content {
+    margin-left: 0; /* Sidebar'ı yok sayalım */
+    width: 100%; /* Ana içeriği %100 yapalım */
+  }
+
+  /* Statistik Kartları */
+  .stats-cards {
+    flex-direction: column; /* Kartları dikey yapıyoruz */
+    gap: 20px; /* Kartlar arasındaki boşluğu artırıyoruz */
+  }
+
+  /* Tables */
+  .tables-container {
+    width: 100%;
+    margin-left: 0; /* Tabloları tamamen genişletiyoruz */
+    margin-bottom: 20px;
+  }
+
+  /* Tablo içeriği */
+  .table-content th, 
+  .table-content td {
+    font-size: 14px; /* Mobilde fontları küçültüyoruz */
+    padding: 8px; /* Hücrelerin içeriğini daraltıyoruz */
+  }
+
+  /* Admin Icon ve Menü */
+  .admin-icon {
+    gap: 5px; /* Admin ikonunun ve metninin arasını daraltıyoruz */
+  }
+
+  .admin-text {
+    font-size: 16px; /* Admin metnini küçültüyoruz */
+  }
+
+  /* Hamburger Menü */
+  .sidebar-menu {
+    display: none; /* Mobilde menü gizlensin */
+  }
+
+  .menu-item {
+    font-size: 14px; /* Menü elemanlarının fontlarını küçültüyoruz */
+  }
+
+  /* Menü aktif */
+  .menu-item.active {
+    background-color: #BDC3C7; /* Aktif menü öğesini biraz daha belirgin hale getiriyoruz */
+  }
+}

@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;  /* Ensure the body takes up full height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* Center content vertically and horizontally */
+    height: 100vh;
+}
+
+h1 {
+    font-size: 28px;
+    text-align: center;
+    width: max-content;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;  /* Optional: to limit the form width */
+}
+
+.left-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.left-side img.logo {
+    width: 300px;
+    height: auto;
+}
+
+.right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-box {
+    width: 100%;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 500;
+    color: #333;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-box label {
+    font-size: 14px;
+    color: #333;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-box button:hover {
+    background-color: #45a049;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.stay-logged-in {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.stay-logged-in input {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+}
+
+.stay-logged-in label {
+    font-size: 14px;
+    color: #333;
+}
+
+@media screen and (max-width: 768px) {
+    .left-side img.logo {
+        max-width: 200px;
+    }
+    .login-container {
+        gap: 20px;
+    }
+
+    .left-side {
+        margin-bottom: 60px;
+    }
+
+    .right-side {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+    }
+}

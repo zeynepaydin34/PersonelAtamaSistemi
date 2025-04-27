@@ -1,0 +1,35 @@
+.subnavbar {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 0; /* artık gerek yok */
+    z-index: 9;
+    position: relative;
+}
+
+
+.subnavbar ul {
+    list-style: none; /* Noktalı listeyi kaldırıyoruz */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Linkleri ortada hizala */
+}
+
+.subnavbar ul li {
+    margin: 0 20px; /* Her bir link arasına mesafe bırak */
+}
+
+.subnavbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+.subnavbar ul li a:hover {
+    background-color: #4CAF50; /* Hover durumunda arka plan değişir */
+    border-radius: 4px;
+}

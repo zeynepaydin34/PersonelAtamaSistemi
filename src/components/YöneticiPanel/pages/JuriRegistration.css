@@ -1,0 +1,127 @@
+.juri-selection {
+  display: flex;
+  flex-direction: column; /* Yatay yerine dikey düzen */
+  padding: 30px;
+  max-width: 1000px; /* Formun genişliğini artırdık */
+  margin: 0 auto; /* Ortalamayı sağlıyoruz */
+  background-color: #f9f9f9; /* Arka plan rengi */
+  border-radius: 8px; /* Yuvarlak köşeler */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+.juri-selection h2 {
+  text-align: center; /* Başlık ortalanıyor */
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Form elemanları arasına boşluk ekledik */
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px; /* İçerik boşluğunu artırdık */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Alanları yuvarladık */
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  transition: border 0.3s ease; /* Butona focus effect ekliyoruz */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4CAF50; /* Focus olunca renk değişecek */
+  outline: none; /* Focus outline'ını kaldırdık */
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Hover animasyonu */
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+button[type="button"] {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+button[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+.table-container {
+  height: 100%; /* Yükseklik otomatik ayarlansın, sabitleme yok */
+  width: auto;
+  max-height: none; /* Maksimum yükseklik sınırlamasını kaldırdık */
+  overflow: visible; /* Kaydırma çubuğunu hemen gizlemedik */
+  margin-top: 20px; /* Tablonun üst kısmına boşluk ekleyelim */
+}
+
+table {
+  width: 100%; /* Tablonun tam genişliği */
+  border-collapse: collapse;
+  table-layout: fixed; /* Hücrelerin eşit genişlikte olmasını sağlıyoruz */
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 15px 20px; /* Hücrelerin içindeki boşlukları artırdık */
+  text-align: left;
+  white-space: nowrap; /* İçeriğin tek satırda olmasını sağlar */
+  font-size: 18px;
+  min-width: 200px; /* Hücrelerin minimum genişliğini artırdık */
+}
+
+table th {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+table tr:hover {
+  background-color: #f0f0f0; /* Hover efekti */
+}
+
+table td p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+table td {
+  vertical-align: middle;
+}

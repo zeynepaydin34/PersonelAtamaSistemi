@@ -1,0 +1,85 @@
+/* Sayfa genel ayarları */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* İçeriği yatayda ortalar */
+    align-items: flex-start; /* Başlığı üstte tutar */
+    background-color: #f4f4f9; /* Sayfa arka plan rengi */
+  }
+  
+  /* Duyurular container'ı */
+  .announcement-container {
+    width: 90%; /* Sayfa genişliğine göre duyuru kutularının genişliğini artırdık */
+    max-width: 1280px;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+  }
+  
+  /* Başlık kısmı - Sabit kalacak (sticky) */
+  .announcement-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    position: sticky; /* Başlık sabit olacak */
+    top: 0; /* Sayfanın üst kısmına yapışacak */
+    background-color: #f4f4f9; /* Başlık alanının arka planı */
+    z-index: 10;
+    padding: 1rem 0;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  /* Duyuru listesi */
+  .announcement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-height: 75vh; /* Duyuruların boyutunu biraz daha büyütmek için max-height arttırıldı */
+    overflow-y: auto; /* Kaydırma çubuğu eklemek için */
+    padding-right: 10px; /* Kaydırma çubuğunun düzgün görünmesi için sağ boşluk */
+    margin-bottom: 2rem;
+    border: 1px solid #ccc; /* Görsel olarak kutuyu sınırlandırmak için */
+    background-color: #fafafa;
+    width: 100%;
+    border-radius: 10px; /* Köşeleri yuvarlamak için */
+  }
+  
+  /* Duyuru kutusu */
+  .announcement-box {
+    background-color: #f9f9f9;
+    padding: 2rem; /* Kutuların iç padding'ini artırdık */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Kutuları daha geniş yapmak için %100 genişlik */
+  }
+  
+  .announcement-date {
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .announcement-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .announcement-department {
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .announcement-description {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+  }
+  

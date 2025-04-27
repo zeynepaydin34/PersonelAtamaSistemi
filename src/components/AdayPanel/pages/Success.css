@@ -1,0 +1,58 @@
+.success-container {
+    display: flex;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center; /* Center horizontally */
+    height: 80vh; /* Adjust height to be a bit less, so content moves up */
+    background-color: #f4f7f6;
+    padding-top: 30px; /* Add space at the top to avoid being too close to the edge */
+  }
+  
+  .success-message {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .success-icon {
+    color: #28a745; /* Green color for success */
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .success-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .success-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .go-to-profile-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .go-to-profile-button:hover {
+    background-color: #218838; /* Darker green */
+  }
+  /* Specific styles for the "Show Application" button */
+.show-application {
+  width: 100%; /* Ensures the button takes up full available width */
+  max-width: 300px; /* Optional: limit maximum width to make the button look nicer */
+  margin: 0 auto; /* Centers the button horizontally */
+  display: block; /* Make sure the button is a block-level element */
+}

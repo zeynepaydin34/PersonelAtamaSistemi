@@ -1,0 +1,94 @@
+/* Sayfa genel stili */
+body {
+  background-color: #e6f7ff;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Giriş alanı (form) */
+.aday-giris-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  min-width: 80vh;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.aday-giris-form {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Logo */
+.aday-giris-form img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+/* Inputlar */
+.form-input input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Başlık */
+h2 {
+  font-size: 18px;
+  color: #555;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+/* Hata mesajı */
+.error-message p {
+  color: red;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* Giriş butonu */
+.login-button {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 20px;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #45a049;
+}
+
+/* Alt linkler */
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

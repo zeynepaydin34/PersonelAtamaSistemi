@@ -1,0 +1,75 @@
+.footer {
+  background-color: #333;
+  color: white;
+  margin: 0;
+  padding: 20px 0 10px 0; /* Alt padding azaldı */
+  text-align: center;
+  width: 100vw;
+  position: relative;
+  bottom: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  max-width: 50%;
+  text-align: left; /* Başlangıç hizasını sola alıyoruz */
+  margin-left: 150px; /* Soldan boşluk ekliyoruz */
+}
+
+.contact-info h3 {
+  margin-bottom: 10px;
+  font-size: 18px; /* Başlık boyutunu ayarladık */
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 14px; /* İletişim bilgisi metninin boyutunu küçülttük */
+}
+
+.contact-info a {
+  color: white; /* Beyaz renk ile mail linki */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.rights {
+  text-align: center;
+  margin-top: 30px; /* 100px yerine daha az */
+  font-size: 14px;
+  background-color: #333;
+}
+
+.icon {
+  margin-right: 8px;
+  color:  white; /* ikon rengi */
+  font-size: 1.0rem; /* ikon boyutu */
+  vertical-align: middle;
+}
+
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    max-width: 100%;
+    text-align: center; /* Mobilde ortalanmış */
+    margin-left: 0; /* Mobilde soldan boşluk kaldırılıyor */
+  }
+
+  .rights {
+    text-align: center;
+    margin-top: 10px;
+  }
+}

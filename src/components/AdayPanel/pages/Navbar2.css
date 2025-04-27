@@ -1,0 +1,71 @@
+.navbar2 {
+  width: 100%; /* Tüm sayfa boyunca uzansın */
+  height: 70px; /* Yüksekliğini sabit yap */
+  background-color: #ffffff; /* İstersen renk ver */
+  display: flex;
+  align-items: center; /* Dikey hizalama */
+  justify-content: space-between; /* Sol ve sağ içerikleri ayır */
+  padding: 0 20px; /* Sağ ve sol boşluk */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  position: fixed; /* Sabit navbar */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Diğer içeriklerin üstünde olsun */
+  color: #333;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-right {
+  position: relative;
+}
+
+.profile-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Dropdown menü */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Show dropdown when hovering over .dropdown or .dropdown-content */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1; /* Optional: Add hover effect for links */
+}

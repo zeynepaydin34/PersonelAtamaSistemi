@@ -1,0 +1,124 @@
+/* BasvuruDurum.css */
+.basvuru-container {
+  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  min-height: 500px;
+}
+
+.basvuru-baslik {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.basvuru-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.basvuru-table th,
+.basvuru-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.basvuru-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #333;
+}
+
+.basvuru-table td {
+  color: #555;
+}
+
+.basvuru-table td a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.basvuru-table td a:hover {
+  text-decoration: underline;
+}
+
+.basvuru-table td button.btn-yonlendir {
+  background-color: #f44336;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.basvuru-table td button.btn-yonlendir:hover {
+  background-color: #d32f2f;
+}
+
+.basvuru-table th:nth-child(1),
+.basvuru-table td:nth-child(1) {
+  width: 12%;
+}
+
+.basvuru-table th:nth-child(2),
+.basvuru-table td:nth-child(2) {
+  width: 12%;
+}
+
+.basvuru-table th:nth-child(3),
+.basvuru-table td:nth-child(3) {
+  width: 18%;
+}
+
+.basvuru-table th:nth-child(4),
+.basvuru-table td:nth-child(4) {
+  width: 15%;
+}
+
+.basvuru-table th:nth-child(5),
+.basvuru-table td:nth-child(5) {
+  width: 18%;
+}
+
+.basvuru-table th:nth-child(6),
+.basvuru-table td:nth-child(6) {
+  width: 8%;
+}
+
+.basvuru-table th:nth-child(7),
+.basvuru-table td:nth-child(7) {
+  width: 15%;
+}
+
+@media (max-width: 768px) {
+  .basvuru-table th,
+  .basvuru-table td {
+    padding: 6px;
+  }
+
+  .basvuru-table {
+    font-size: 13px;
+  }
+
+  .basvuru-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .basvuru-table th {
+    display: none;
+  }
+
+  .basvuru-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+  }
+}

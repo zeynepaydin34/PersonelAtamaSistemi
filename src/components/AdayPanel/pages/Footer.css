@@ -1,0 +1,10 @@
+.footer {
+  width: 100vw; /* Viewport genişliği kadar */
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: auto; /* Footer'ı en alta yerleştirmek için */
+}

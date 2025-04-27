@@ -1,0 +1,127 @@
+.navbar {
+  width: 100vw;
+  height: 90px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  margin-left: 80px;  /* Sağ tarafa daha fazla kaydırmak için margin-left artırıldı */
+}
+
+.kou-logo {
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.site-name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.site-name-top {
+  font-size: 16px;
+  color: black;
+}
+
+.site-name-bottom {
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.social-icon {
+  color: black;
+  font-size: 24px;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s; /* Renk geçişi ekledik */
+}
+
+/* Hover durumunda renk değişimi */
+.social-icon:hover {
+  color: #4CAF50; /* Hoverda yeşil renk olsun */
+}
+.navbar {
+  width: 100vw;
+  height: 90px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  margin-left: 80px;  /* Sağ tarafa daha fazla kaydırmak için margin-left artırıldı */
+}
+
+.kou-logo {
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.site-name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.site-name-top {
+  font-size: 16px;
+  color: black;
+}
+
+.site-name-bottom {
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.social-icon {
+  color: black;
+  font-size: 24px;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s; /* Renk geçişi ekledik */
+}
+
+/* Hover durumunda renk değişimi */
+.social-icon:hover {
+  color: #555; /* Hoverda yeşil renk olsun */
+}

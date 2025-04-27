@@ -1,0 +1,67 @@
+/* Navbar Stil */
+.navbar {
+  width: 100vw;
+  height: 70px;
+  background-color: whitesmoke !important;  /* Force the background color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+  
+/* Amblem ve Site Adı */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  margin-top: 5px; /* Yukarıdaki mesafeyi artırarak daha aşağıya indiriyoruz */
+}
+
+.kou-logo {
+  width: 50px; /* Amblemi biraz daha büyütüyoruz */
+  height: auto;
+  margin-right: 15px; /* Amblem ile yazı arasındaki mesafeyi arttırıyoruz */
+}
+
+.site-name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Ambleme hizalamak için */
+  margin-top: 2px; /* Yazıyı biraz daha aşağıya kaydırıyoruz */
+}
+
+.site-name-top {
+  font-size: 18px; /* Üst metni biraz büyütüyoruz */
+  color: black;
+}
+
+.site-name-bottom {
+  font-size: 20px; /* Alt metni biraz daha büyük yapıyoruz */
+  color: black;
+  font-weight: bold;
+  margin-top: 3px; /* Logonun yanındaki alt metinle üst metin arasındaki mesafeyi arttırıyoruz */
+}
+
+/* Sosyal Medya İkonları için Eklendi */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* İkonları biraz daha aşağıya kaydırıyoruz */
+}
+
+.social-icon {
+  color: black;
+  font-size: 24px; /* İkon boyutunu büyütmek için */
+  margin: 0 15px; /* İkonlar arasındaki mesafe */
+  text-decoration: none; /* Linklerin altını çizmemek için */
+}
+
+.social-icon:hover {
+  color: black; 
+}

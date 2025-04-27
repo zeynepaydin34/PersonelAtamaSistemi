@@ -1,0 +1,101 @@
+/* Sayfa genel stili */
+body {
+  background-color: #e6f7ff;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Sayfa başlığı */
+h1 {
+  font-size: 32px;
+  color: #333;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: normal;
+}
+
+/* Küçük resim */
+.small-image {
+  display: block;
+  margin: 10px auto;
+  max-width: 120px;
+  height: auto;
+}
+
+/* Giriş alanı (form) */
+.juri-giris-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh; /* Yüksekliği daha kısa yaparak daha yukarı taşı */
+  margin-top: 0; /* Üstten boşluğu sıfırladık */
+  padding-top: 0; /* Gereksiz boşluğu kaldırdık */
+}
+
+.juri-giris-form {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin-top: 0; /* Formun üst boşluğunu sıfırlıyoruz */
+}
+
+.juri-giris-form img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.juri-giris-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login-button {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 20px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #45a049;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Alt başlık (form başlığı) */
+h2 {
+  font-size: 18px;
+  color: #555;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}

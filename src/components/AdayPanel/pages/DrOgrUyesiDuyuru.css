@@ -1,0 +1,59 @@
+/* Announcement Detail Container */
+.duyuru-detail-container {
+    margin-top: 120px; /* Adjust margin to provide space for the Navbar */
+    padding: 20px;
+    background-color: transparent; /* Ensure transparency */
+  }
+  
+  /* Other content styling */
+  .duyuru-detail-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .criteria-section {
+    margin-bottom: 30px;
+  }
+  
+  .criteria-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .criteria-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .announcement-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Apply Button Container */
+  .apply-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Space between content and button */
+  }
+  
+  /* Apply Button Styling */
+  .apply-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #218838;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  .apply-button:hover {
+    background-color: #1c7430; /* Darker green on hover */
+  }
+  

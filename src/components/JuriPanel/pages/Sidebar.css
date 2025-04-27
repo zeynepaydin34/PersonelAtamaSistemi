@@ -1,0 +1,163 @@
+/* Sidebar stilini düzenliyoruz */
+.sidebar {
+  background-color: #34495e;
+  color: white;
+  width: 250px; /* Sidebar genişliği */
+  padding: 20px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sidebar'a gölge ekleniyor */
+  transition: transform 0.3s ease; /* Sidebar animasyonu ekliyoruz */
+}
+
+/* Header stilini düzenliyoruz */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f9;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 250px; /* Sidebar'ın genişliği kadar sola kaydır */
+  width: calc(100% - 250px); /* Sidebar genişliği kadar sağdan daralt */
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Header'a gölge ekleniyor */
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-left h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb svg {
+  margin-right: 5px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notification-icon,
+.logout-icon {
+  cursor: pointer;
+  font-size: 24px;
+  color: #34495e;
+  transition: color 0.3s ease;
+}
+
+.notification-icon:hover,
+.logout-icon:hover {
+  color: #2c3e50; /* Hover durumunda daha koyu renk */
+}
+
+/* Sidebar ve Header arasındaki mesafeyi düzenliyoruz */
+.content {
+  margin-left: 250px; /* Sidebar'a yer bırakmak için */
+  margin-top: 70px; /* Header'ı görmeyi engellememek için */
+}
+
+/* Menü öğeleri stilini düzeltiyoruz */
+.sidebar-menu {
+  padding-left: 0;
+  margin-top: 30px; /* Sidebar'daki başlıklarla menü öğeleri arasında boşluk */
+  list-style: none;
+}
+
+.sidebar-menu .menu-item {
+  margin-bottom: 15px;
+}
+
+.sidebar-menu .menu-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-menu .menu-item a:hover {
+  background-color: #2980b9; /* Hover durumunda arka plan rengi değişiyor */
+}
+
+.sidebar-menu .menu-item a.active {
+  background-color: #8e44ad; /* Aktif menü elemanının rengi mor */
+}
+
+/* Sidebar için animasyon */
+.sidebar.open {
+  transform: translateX(0); /* Sidebar açıldığında görünür olur */
+}
+
+.sidebar.closed {
+  transform: translateX(-250px); /* Sidebar kapandığında gizlenir */
+}
+
+/* Responsive düzenleme */
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    width: 200px; /* Orta boy ekranlarda sidebar genişliğini küçültüyoruz */
+  }
+
+  .header {
+    left: 200px; /* Sidebar genişliği kadar sola kaydır */
+    width: calc(100% - 200px); /* Header genişliğini azaltıyoruz */
+  }
+
+  .content {
+    margin-left: 200px; /* İçeriği sağa kaydırıyoruz */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none; /* Sayfa küçüldüğünde sidebar'ı gizliyoruz */
+    position: absolute; /* Sabitlemeyi kaldırıyoruz */
+    top: 0;
+    left: 0;
+    width: 100%; /* Tam ekran genişliğinde olmalı */
+    background-color: #34495e;
+  }
+
+  .header {
+    left: 0; /* Header'ı tam sağa yerleştiriyoruz */
+    width: 100%; /* Header'ı tam genişlikte yapıyoruz */
+  }
+
+  /* Sidebar açma butonu */
+  .sidebar-toggle {
+    display: block; /* Menü açma butonunu gösteriyoruz */
+    cursor: pointer;
+  }
+
+  .content {
+    margin-left: 0; /* Sidebar gizlendiği için içerik tam genişlikte */
+  }
+
+  .sidebar.open {
+    display: block; /* Sidebar'ı açıyoruz */
+  }
+}

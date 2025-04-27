@@ -1,0 +1,138 @@
+/* Sayfa genel stili */
+body {
+  background-color: #e6f7ff; /* Soft mavi arka plan rengi */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+  
+  /* En üstteki başlık için stil */
+  h1 {
+    position: absolute; /* Sayfanın üst kısmında sabit durmasını sağlar */
+    top: 20px; /* Sayfanın üst kısmına yakın olmasını sağlar */
+    left: 50%;
+    transform: translateX(-50%); /* Yazıyı yatayda ortalar */
+    font-size: 32px;
+    color: #333; /* Yazı rengi */
+    text-align: center; /* Yazıyı ortalar */
+    width: 100%;
+    z-index: 1000; /* Başlığın üstte görünmesini sağlar */
+    margin: 0;
+    padding: 0;
+    font-weight: normal; /* Yazının kalınlığını azaltıyoruz */
+  }
+
+  
+  
+  /* Jüri Girişi Formunun stilini belirleyelim */
+  .juri-giris-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .juri-giris-form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .juri-giris-form img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .juri-giris-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+ /* Giriş Yap butonunun stilini büyük yapmak için */
+.login-button {
+    background-color: #4CAF50; /* Butonun arka plan rengi */
+    color: white; /* Buton üzerindeki yazı rengi */
+    font-size: 20px; /* Yazı boyutunu büyütme */
+    padding: 15px 30px; /* Butonun içindeki boşlukları artırma (dikeyde 15px, yatayda 30px) */
+    border: none; /* Kenarlık yok */
+    border-radius: 5px; /* Kenarları yuvarlama */
+    cursor: pointer; /* Fareyi üzerine getirdiğinizde pointer imleci */
+    display: inline-block; /* Butonun etrafında boşluk kalmasını sağlar */
+    transition: all 0.3s ease; /* Butona tıklama animasyonu ekler */
+  }
+  
+  /* Butona fare ile geldiğinde efekt */
+  .login-button:hover {
+    background-color: #45a049; /* Hover durumunda renk değişir */
+  }
+  
+  /* Buton çevresindeki alanı daha büyük yapmak */
+  .juri-giris-form {
+    width: 100%; /* Formun genişliğini tam yap */
+    max-width: 400px; /* Maksimum genişliği belirle */
+    margin: 0 auto; /* Ortalamak için */
+    padding: 20px; /* Formun etrafında boşluk ekle */
+    background-color: #f9f9f9; /* Formun arka plan rengi */
+    border-radius: 10px; /* Formun köşelerini yuvarla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge ekle */
+  }
+  
+  
+  .footer-links {
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* Başlık için stil */
+/* Başlık için stil */
+h1 {
+    position: absolute;
+    top: 50px; /* Başlık daha yukarıda */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  /* Başlık altındaki yazı için stil */
+  h2 {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin-top: 10px; /* Başlık ve form arasındaki boşluğu küçülttük */
+  }
+  
+  /* Fotoğraf için stil */
+  .small-image {
+    display: block;
+    margin: 20px auto; /* Fotoğraf ile diğer öğeler arasındaki boşluğu azaltın */
+    max-width: 120px;
+    height: auto;
+  }
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  

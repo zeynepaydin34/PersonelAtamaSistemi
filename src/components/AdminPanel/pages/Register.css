@@ -1,0 +1,61 @@
+body {
+  background-color: #f4f4f9;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 80vh;
+  background-color: #f4f4f9;
+  margin-top: 20px; /* Ekstra bir üst margin ile daha yukarı alabilirsiniz */
+}
+
+
+.register-card {
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  max-height: 600px; /* Maksimum yükseklik ekledik */
+  overflow: auto; /* İçerik taşarsa kaydırma çubuğu ekler */
+  text-align: center;
+  background-color: #ffffff; /* Formun kendi arka planını beyaz yapalım */
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1266f1;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #0d4e8b;
+}

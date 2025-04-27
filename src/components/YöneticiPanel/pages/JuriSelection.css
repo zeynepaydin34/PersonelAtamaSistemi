@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.form-group input, .form-group select {
+  width: 300px;
+  height: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+select:disabled {
+  background-color: #f0f0f0;
+}
+.juri-selection {
+  position: relative;
+  z-index: 1; /* Formu öne getir */
+  background-color: transparent; /* Arka planı şeffaf yap */
+  box-shadow: none; /* Varsayılan kutu gölgesini kaldır */
+  padding: 0; /* Gereksiz boşlukları kaldır */
+  margin: 0; /* Gereksiz marginleri kaldır */
+}

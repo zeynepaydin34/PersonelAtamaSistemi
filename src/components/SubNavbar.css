@@ -1,0 +1,42 @@
+.subnavbar {
+    position: relative;
+    margin-top: 16%; /* Navbar yüksekliği kadar boşluk */
+    background-color: #555;  /* Koyu gri yerine daha açık bir gri */
+    padding: 10px 0;
+    text-align: center;
+    color: white; /* Yazı rengi beyaz */
+    width: 100%; /* Genişliği 100% yapıyoruz */
+    height: 3vw;
+    margin-left: auto; /* Ortalamak için */
+    margin-right: auto; /* Ortalamak için */
+    display: flex; /* Flexbox düzenini kullanıyoruz */
+    justify-content: center; /* Yatayda ortalıyoruz */
+    align-items: center; /* Dikeyde ortalıyoruz */
+}
+
+.subnavbar ul {
+    list-style: none; /* Noktalı listeyi kaldırıyoruz */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Linkleri ortada hizala */
+}
+
+.subnavbar ul li {
+    margin: 0 20px; /* Her bir link arasına mesafe bırak */
+}
+
+.subnavbar ul li a {
+    color: white; /* Beyaz renk, ancak başka bir renk de tercih edebilirsin */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+.subnavbar ul li a:hover {
+    background-color: white;
+    border-radius: 0.8px;
+    color: black;
+}

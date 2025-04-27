@@ -1,0 +1,160 @@
+/* .container: Sayfanın %80'ini kapsar */
+.container {
+  display: flex;
+  background-color: #f4f4f9;
+  height: 100vh; /* Sayfa yüksekliği %100 olacak */
+  flex-direction: column; /* Dikey sıralama */
+  justify-content: flex-start; /* İçerikler üstten başlasın */
+  width: 100%; /* Genişlik %100 olacak */
+  padding: 20px;
+  box-sizing: border-box; /* Padding'i genişlik hesaplamasına dahil et */
+}
+
+/* .content: İçeriğin büyüklüğünü sınırla */
+.content {
+  flex-grow: 1; /* İçerik alanı genişlemesin */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 70px; /* Header'ı engellemesinin önüne geçiyoruz */
+  overflow-y: auto; /* İçerik fazla olursa kaydırma ekleriz */
+  max-height: calc(100vh - 300px); /* Formun yüksekliğini sabitle */
+}
+
+/* Form içeriği için sınırlandırma */
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  max-height: 90%; /* Formu dinamik olarak sınırlandır */
+  overflow-y: auto; /* İçerik fazla olursa kaydırma ekleriz */
+  box-sizing: border-box; /* Padding'i genişlik hesaplamasına dahil et */
+}
+
+/* Form ve içeriği hizalama */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Form alanları küçük ekranlarda satır değiştirebilir */
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box; /* Padding ve border ile birlikte genişliği hesapla */
+}
+
+/* Submit butonu */
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 20px; /* Butonun üst kısmında boşluk */
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+  /* .container ve .content genişlik ayarları */
+  .container {
+    width: 90%; /* Ekranın %90'ını kapsar */
+  }
+
+  .content {
+    margin-top: 50px; /* Header'ın boyutuna göre üst boşluk */
+    padding: 15px; /* İçeriğin etrafındaki boşluğu azalt */
+  }
+
+  /* Form */
+  .form {
+    padding: 15px; /* Form etrafındaki boşluğu azalt */
+  }
+
+  .form-row {
+    gap: 15px; /* Formdaki satırların arasındaki boşluğu daralt */
+  }
+
+  .submit-btn {
+    width: 100%; /* Buton genişliği ekranın tamamını kaplasın */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Daha küçük ekranlar için düzenlemeler */
+  .container {
+    width: 100%; /* Tam genişlik */
+    margin: 0 auto;
+  }
+
+  .content {
+    margin-top: 40px; /* Daha küçük ekranlar için üst boşluk */
+    padding: 10px;
+  }
+
+  /* Form */
+  .form {
+    padding: 10px;
+  }
+
+  .form-row {
+    flex-direction: column; /* Formdaki elemanları dikey sıralıyoruz */
+    gap: 10px;
+  }
+
+  .submit-btn {
+    width: 100%; /* Buton ekranın tamamını kaplasın */
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobil ekranlar için son düzenlemeler */
+  .content {
+    margin-top: 30px; /* Üst boşluğu daha da küçültüyoruz */
+  }
+
+  .form {
+    padding: 5px; /* Formun etrafındaki boşluğu daha da azaltıyoruz */
+  }
+
+  .form-group {
+    margin-bottom: 10px; /* Form elemanları arasındaki boşluğu azaltıyoruz */
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 14px; /* Yazı tipini küçültüyoruz */
+    padding: 6px; /* İçerik padding'ini küçültüyoruz */
+  }
+
+  .submit-btn {
+    padding: 8px 15px; /* Buton padding'ini küçültüyoruz */
+  }
+}

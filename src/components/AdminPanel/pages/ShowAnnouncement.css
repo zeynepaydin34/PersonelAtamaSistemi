@@ -1,0 +1,120 @@
+/* Main content alanı */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px; /* Sidebar'ın genişliği kadar sola kaydır */
+    margin-top: 40px; /* Başlık ve diğer içeriklerin hizalanması için üst boşluğu küçülttük */
+    overflow-y: auto; /* İçeriğin taşmasını engeller */
+    background-color: #ecf0f1; /* Arka plan rengini değiştirdik */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge ekledik */
+}
+
+/* İlanlar tablosunun stilini düzenliyoruz */
+.announcement-table {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; /* Tabloyu başlıktan biraz daha yaklaştırdık */
+    overflow-x: auto;
+}
+
+/* Tablolar için genel stil */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablo başlıkları (th) ve hücreler (td) */
+th, td {
+    padding: 12px 40px; /* Daha geniş padding */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #3f3c3c;
+}
+
+th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase; /* Başlıkları büyük harf yapalım */
+    font-size: 14px;
+}
+
+td {
+    background-color: #fafafa;
+    font-size: 14px;
+}
+
+/* Hover efekti ile satırın rengini değiştirme */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+    .main-content {
+        margin-left: 0; /* Sidebar gizlendiğinde içerik sola kaymasın */
+        padding: 15px; /* İçeriğin etrafındaki boşluğu azalt */
+    }
+
+    .announcement-table {
+        padding: 15px; /* Tablo etrafındaki boşluğu azalt */
+    }
+
+    th, td {
+        padding: 10px 20px; /* Table hücrelerindeki padding'i küçült */
+    }
+
+    th {
+        font-size: 12px; /* Başlık yazı boyutunu küçült */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Daha küçük ekranlar için düzenlemeler */
+    .main-content {
+        margin-left: 0; /* Sidebar gizlendiğinde içerik sola kaymasın */
+        padding: 10px;
+    }
+
+    .announcement-table {
+        padding: 10px;
+    }
+
+    th, td {
+        padding: 8px 15px; /* Daha küçük ekranlarda padding'i azalt */
+        font-size: 12px; /* Font boyutunu küçük ekranlarda daha da küçült */
+    }
+
+    th {
+        font-size: 10px; /* Daha küçük başlık yazı boyutu */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobil ekranlar için son düzenlemeler */
+    .main-content {
+        padding: 5px; /* İçeriğin etrafındaki boşluğu daha da azaltıyoruz */
+    }
+
+    .announcement-table {
+        padding: 5px; /* Tablo etrafındaki boşluğu daha da azaltıyoruz */
+    }
+
+    th, td {
+        padding: 6px 12px; /* Daha da küçük padding */
+        font-size: 10px; /* Font boyutunu daha da küçültüyoruz */
+    }
+
+    th {
+        font-size: 8px; /* Mobil ekranlar için başlık font boyutunu daha da küçültüyoruz */
+    }
+
+    /* Mobilde hover efekti kaldırılabilir */
+    tr:hover {
+        background-color: transparent; /* Mobilde hover efekti gereksiz olabilir */
+    }
+}

@@ -1,0 +1,167 @@
+body {
+  background-color: white; /* Sayfanın arka planını beyaz yap */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.banner-background {
+  background-image: url("/assets/kou_background.jpg");
+  width: 60%; /* Yatayda %70 genişlik */
+  height: 60vh; 
+  background-size: cover; /* Resmi kutuya sığdır */
+  background-position: center; /* Resmi ortala */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto; /* Ortada hizalama */
+}
+
+
+/* Job Listings */
+.job-listing {
+  padding: 20px;
+  border-radius: 3px; /* Daha az yuvarlaklık */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Hafif gölge veya tamamen kaldırabilirsin */
+  border: 1px solid ; /* Daha ciddi görünüm için çerçeve */
+  width: 100%;
+  text-align: left;
+}
+
+.job-listings {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 sütun */
+  gap: 20px; /* kartlar arası boşluk */
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 0;
+  width: 60%; /* Banner ile hizalanması için */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.job-listing {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Grid sistemi ile uyumlu */
+}
+
+.job-listing h2 {
+  margin-top: 0;
+}
+
+.announcement-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #222;
+  font-family: Arial, sans-serif;
+  width: 60%; /* Duyuru listesiyle aynı genişlikte olacak */
+  border-bottom: 3px solid #333; /* Başlık altına çizgi */
+  padding-bottom: 5px; /* Çizgi ile başlık arasında boşluk */
+  margin-left: auto;
+  margin-right: auto; /* Ortada hizalama */
+}
+
+
+/* İlan paneli */
+.job-listing-panel {
+  width: 60%;
+  margin: 40px auto;
+  border: 1px solid #ddd;
+  border-top: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Her ilan satırı */
+.job-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-top: 1px solid;
+}
+
+/* Grid yapısı */
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 sütun */
+  gap: 10px;
+  width: 60%;
+  margin: 40px auto;
+}
+
+/* Her kutu */
+.job-box {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-family: Arial, sans-serif;
+  border-bottom: 1px solid #ddd; /* Her kutu arasında ince bir çizgi */
+}
+
+/* İlan başlığı kısmı */
+.job-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-left: 15px;
+  text-align: left;
+}
+
+/* Tarih kısmı */
+.job-date {
+  font-size: 14px;
+  color: #666;
+  width: 100px;
+  flex-shrink: 0;
+  font-weight: bold; /* Kalın yazı */
+  border-left: 2px solid #333; /* Dikey kalın çizgi */
+  padding-left: 10px; /* Çizgi ile yazı arasında boşluk */
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .banner-background {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .job-grid {
+    grid-template-columns: 1fr; /* Mobilde tek sütun */
+    width: 90%;
+  }
+
+  .job-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-date {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .job-listing {
+    width: 100%;  /* Mobilde iş ilanlarının genişliği %100 olacak */
+  }
+  .job-listings {
+    grid-template-columns: 1fr; /* Mobilde tek sütun */
+    width: 90%;
+  }
+
+  .banner-background {
+    height: 40vh;
+  }
+}
+

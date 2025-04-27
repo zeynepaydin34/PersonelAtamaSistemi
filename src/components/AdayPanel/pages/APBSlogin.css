@@ -1,0 +1,87 @@
+/* Container for all login buttons */
+.login-container {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center; /* Center buttons container */
+  align-items: center; /* Vertically center the container */
+  width: 100%; /* Ensure it spans full width */
+}
+
+.login-buttons {
+  width: 100%; /* Makes the button container responsive */
+  max-width: 500px; /* Set a max width to prevent it from getting too wide */
+  padding: 0 20px; /* Add some padding to prevent buttons from touching the edges */
+}
+
+/* Butonlar için ortak stil */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap between buttons */
+  width: 100%; /* Ensure buttons fill the container */
+}
+
+/* General button style */
+button {
+  width: 100%; /* Make buttons stretch to fill their container */
+  padding: 15px; /* Increased padding for wider buttons */
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center; /* Ensure text is centered */
+}
+
+/* Button styles */
+.login-button {
+  background-color: #0078d7;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #005fb8;
+}
+
+.forgot-button {
+  background-color: #f4a261;
+  color: white;
+}
+
+.forgot-button:hover {
+  background-color: #e76f51;
+}
+
+.register-button {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+.register-button:hover {
+  background-color: #21867a;
+}
+
+/* Aday button style */
+.aday-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px;
+}
+
+.aday-icon {
+  width: 25px;
+  height: auto;
+  margin-right: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Logo style */
+.logo {
+  width: 100px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
