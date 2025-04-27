@@ -57,6 +57,7 @@ Sistem, dört temel kullanıcı rolüne sahiptir:
 ## Fonksiyonel Geeksinimler
 <img width="397" alt="project-image-1" src="https://github.com/user-attachments/assets/3e7a3543-589c-4c61-b97e-e4bbe2f29656" />
 
+
 Şekil-2 Tüm kullanıcılar için ayrı giriş ekranları
 
 - Kullanıcı girişi ve yetkilendi 
