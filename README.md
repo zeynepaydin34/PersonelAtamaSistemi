@@ -38,7 +38,7 @@ Sistem, dört temel kullanıcı rolüne sahiptir:
 1. Yöneticiler, giriş yaptıktan sonra akademik kadro kriterlerini belirleme yetkisine sahiptir.
 2. KOÜ Atama Yönetmeliği'ne göre her bir akademik kadro için gerekli koşullar detaylı olarak girilebilir.
 3. Adayların sunduğu belgeler ve puanlar otomatik hesaplanır.
-4. 
+   
 <img width="761" alt="project-image-2" src="https://github.com/user-attachments/assets/7f0d335e-6215-4fd9-a7b8-4c47865c1228" />
 Şekil-1 Yöneticilerin kriterleri görüntüleyip düzenleyebilme yetkisi bulunmaktadır.
 
