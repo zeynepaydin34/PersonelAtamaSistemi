@@ -57,8 +57,10 @@ Sistem, dört temel kullanıcı rolüne sahiptir:
 - **API Entegrasyonları:** e-Devlet & Nüfus Müdürlüğü
 
 ## Fonksiyonel Gereksinimler
+<img width="397" alt="project-image-1" src="https://github.com/user-attachments/assets/3e7a3543-589c-4c61-b97e-e4bbe2f29656" />
 
-- Kullanıcı girişi ve yetkilendirme.
+- Kullanıcı girişi ve yetkilendi 
+rme.
 - Personel Daire Başkanlığı tarafından ilan oluşturulması.
 - Adayların başvuru yapması ve belgeleri yüklemesi.
 - Jüri üyelerinin değerlendirme yapması.
@@ -81,7 +83,7 @@ Her bir akademik kadro için (Dr. Öğr. Üyesi, Doçent, Profesör) etkinlik ve
 6. Başvuru süresi tamamlandığında yönetici başvuru sayısı hakkında bilgilendirilir.
 7. Jüri üyeleri belirlenir ve değerlendirmelerini yaparak raporlarını sisteme yükler.
 8. Tüm jüri üyelerinin değerlendirmeleri tamamlandıktan sonra yönetici nihai kararı verir.
-
+![Uploading project-image-2.png…]()
 ## Sonuç
 
 Bu proje, akademik personel başvurularını etkin şekilde yöneten bir sistem tasarımını içermektedir. Kullanıcı dostu arayüzü, ilan yönetimi, başvuru kriterleri belirleme, jüri değerlendirme süreci ve aday takibi gibi fonksiyonlarla akademik kadro alım süreçlerinin şeffaf ve düzenli bir şekilde yürütülmesine katkı sağlayacaktır.
