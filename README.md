@@ -1,5 +1,5 @@
 # PersonelAtamaSistemi
-KOU Akademik Personel Atama Sistemi
+Kocaeli Üniversiteis Akademik Personel Atama Sistemi
 
 ## Kullanılan Teknolojiler
 Frontend: React.js 
