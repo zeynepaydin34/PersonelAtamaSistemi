@@ -1,57 +1,95 @@
-# Personel Atama Sistemi
+# Akademik Personel Başvuru Sistemi
 
-Bu proje, Kocaeli Üniversitesi için geliştirilen bir Akademik Personel Başvuru Sistemi'dir.
-Sistem, akademik personel adaylarının ilgili kadrolara başvuru yapmasını, başvuruların yönetilmesini ve değerlendirilmesini dijital bir platform üzerinden güvenli ve hızlı bir şekilde sağlar.
-Yönetici ve admin kullanıcıları ilanlar ve başvuru kriterleri üzerinde tam kontrol sahibidir.Yöneticiler, değerlendirme yapacak juri adaylarını seçerler ve nihai kararı verirler.
-Jüri üyeleri adayların yüklediği belgeleri inceleyerek değerlendirme yaparlar.
+## Proje Tanıtımı
 
-## Kullanılan Teknolojiler
-Frontend: React.js 
-
-Backend: Node.js (Express.js)
-
-Veritabanı: PostgreSQL
+Bu proje, Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği Bölümü TBL331: Yazılım Geliştirme Laboratuvarı II dersi kapsamında geliştirilmiştir. Akademik personel başvuru sürecini dijital ortamda yönetmeyi amaçlayan bu sistem, akademik kadro ilanları oluşturma, başvuru yapma, jüri değerlendirmeleri ve başvuru sonuçlarının yönetilmesini sağlar.
 
 ## Proje Amacı
-Akademik personel başvuru süreçlerini dijitalleştirerek:
 
-Başvuruların güvenli ve hızlı bir şekilde toplanması,
-
-Belgelerin doğru yönetilmesi,
-
-Değerlendirme süreçlerinin şeffaflaştırılması hedeflenmiştir.
+Bu projenin amacı, akademik personel alım süreçlerini dijitalleştirerek, başvuru, değerlendirme ve sonuç süreçlerini verimli, şeffaf ve düzenli bir şekilde yönetebilecek bir sistem tasarlamaktır.
 
 ## Kullanıcı Rolleri
-Sistem dört temel kullanıcı rolüne sahiptir:
 
-Aday:
-Akademik kadrolara başvuru yapabilen kullanıcılar.
+Sistem, dört temel kullanıcı rolüne sahiptir:
 
-Admin:
-İlanları oluşturan, düzenleyen ve yöneten kullanıcılar.
+- **Aday:** Akademik kadrolara başvuru yapabilen kullanıcılar.
+- **Admin:** İlanları oluşturan ve düzenleyen kullanıcılar.
+- **Yönetici:** Başvuru kriterlerini belirleyen ve sistemin genel kurallarını yöneten kullanıcılar.
+- **Jüri Üyesi:** Adayların başvuru belgelerini inceleyen ve değerlendirme raporu oluşturan kullanıcılar.
 
-Yönetici:
-Başvuru kriterlerini belirleyen ve sistem genel ayarlarını yöneten kullanıcılar.
+## Sistem Bileşenleri
 
-Jüri Üyesi:
-Adayların başvuru belgelerini inceleyen ve değerlendirme raporu oluşturan kullanıcılar.
+### Aday Girişi ve Başvuru Süreci
 
-## Temel Özellikler
-📄 Aday Başvuru Sistemi:
-Adaylar sisteme giriş yaparak ilanlara belgelerini yükleyip başvuru yapabilir.
+1. Adaylar, TC kimlik numarası ve şifre ile sisteme giriş yapar.
+2. Ana sayfada mevcut akademik ilanlar listelenir.
+3. İlanlar Dr. Öğr. Üyesi, Doçent ve Profesör olmak üzere üç kategoriye ayrılır.
+4. Adaylar, ilan detaylarını görüntüleyerek başvuru sürecini başlatır.
+5. Başvuru için gerekli belgeler yüklenerek başvuru tamamlanır.
+6. Başvuru durumu "Beklemede", "Onaylandı" veya "Reddedildi" olarak takip edilebilir.
 
-📢 İlan Yönetimi:
-Admin kullanıcıları yeni ilanlar ekleyebilir, mevcut ilanları düzenleyebilir veya silebilir.
+### Admin Paneli
 
-📑 Başvuru Kriterleri Belirleme:
-Yöneticiler, her ilan için ayrı kriterler tanımlayabilir.
+1. Adminler, giriş yaptıktan sonra ilan yönetim paneline erişir.
+2. Yeni ilan ekleyebilir veya mevcut ilanları düzenleyebilir.
+3. İlanların başlangıç ve bitiş tarihleri, gerekli belgeler ve başvuru koşulları belirlenebilir.
 
-📝 Belgelerin İncelenmesi ve Değerlendirilmesi:
-Jüri üyeleri, adayların yüklediği belgeleri değerlendirerek puanlama ve raporlama yapabilir.
+### Yönetici Paneli
 
-🔐 Güvenli Giriş ve Yetkilendirme:
-Tüm kullanıcı rolleri JWT tabanlı kimlik doğrulama ile korunmaktadır.
+1. Yöneticiler, giriş yaptıktan sonra akademik kadro kriterlerini belirleme yetkisine sahiptir.
+2. KOÜ Atama Yönetmeliği'ne göre her bir akademik kadro için gerekli koşullar detaylı olarak girilebilir.
+3. Adayların sunduğu belgeler ve puanlar otomatik hesaplanır.
 
-🖇️ Dosya Yönetimi:
-Yüklenen dosyalar güvenli bir şekilde sunucu üzerinde saklanır, dosya türü ve boyut kontrolleri yapılır.
+### Jüri Üyesi Paneli
+
+1. Jüri üyeleri, adayın başvuru sırasında yüklediği kanıtlı belgeleri inceleyebilir.
+2. Jüri üyeleri, her başvuru için kendi kişisel değerlendirme raporlarını oluşturmalıdır.
+3. Her jüri üyesi, olumlu/olumsuz değerlendirme yapmalıdır.
+
+## Teknik Gereksinimler
+
+- **Frontend:** React.js / Vue.js
+- **Backend:** Node.js (Express) veya Django
+- **Veritabanı:** PostgreSQL / MongoDB
+- **Kimlik Doğrulama:** JWT / OAuth 2.0
+- **Depolama:** AWS S3 veya Firebase Storage
+- **Bildirim Sistemi:** Twilio / Firebase
+- **API Entegrasyonları:** e-Devlet & Nüfus Müdürlüğü
+
+## Fonksiyonel Gereksinimler
+
+- Kullanıcı girişi ve yetkilendirme.
+- Personel Daire Başkanlığı tarafından ilan oluşturulması.
+- Adayların başvuru yapması ve belgeleri yüklemesi.
+- Jüri üyelerinin değerlendirme yapması.
+- Otomatik puan hesaplama modu.
+- E-posta ve sistem içi bildirim entegrasyonu.
+- PDF formatında belge oluşturma.
+- Nüfus Müdürlüğü ve e-Devlet API entegrasyonu.
+
+## Modüler Kadro Kriterleri
+
+Her bir akademik kadro için (Dr. Öğr. Üyesi, Doçent, Profesör) etkinlik ve puan bazında kriterler belirlenmiştir. Bu kriterler modüler yapıda olmalı ve ilerleyen zamanlarda yapılacak değişikliklere uyum sağlayacak şekilde tasarlanmalıdır.
+
+## Sistem İşleyişi
+
+1. Admin yeni bir akademik ilan ekler.
+2. Yönetici ilan için başvuru kriterlerini belirler.
+3. Aday ilanı görüntüler ve başvuru yapar.
+4. Sistem, adayın başvuruyu tamamlayıp tamamlamadığını kontrol eder.
+5. Yönetici ilan kriterlerinde değişiklik yapabilir.
+6. Başvuru süresi tamamlandığında yönetici başvuru sayısı hakkında bilgilendirilir.
+7. Jüri üyeleri belirlenir ve değerlendirmelerini yaparak raporlarını sisteme yükler.
+8. Tüm jüri üyelerinin değerlendirmeleri tamamlandıktan sonra yönetici nihai kararı verir.
+
+## Sonuç
+
+Bu proje, akademik personel başvurularını etkin şekilde yöneten bir sistem tasarımını içermektedir. Kullanıcı dostu arayüzü, ilan yönetimi, başvuru kriterleri belirleme, jüri değerlendirme süreci ve aday takibi gibi fonksiyonlarla akademik kadro alım süreçlerinin şeffaf ve düzenli bir şekilde yürütülmesine katkı sağlayacaktır.
+
+## Proje Teslim Tarihi
+
+Proje teslim tarihi: **20 Nisan 2025, Saat: 17.00**
+
+Proje GitHub platformuna yüklenmelidir. GitHub reponuzda README (beni oku) belgesini oluşturmalısınız.
+
 
