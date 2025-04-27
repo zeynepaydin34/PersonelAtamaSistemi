@@ -1,8 +1,7 @@
 # Akademik Personel Başvuru Sistemi
 
 ## Proje Tanıtımı
-
-Bu proje, Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği Bölümü TBL331: Yazılım Geliştirme Laboratuvarı II dersi kapsamında geliştirilmiştir. Akademik personel başvuru sürecini dijital ortamda yönetmeyi amaçlayan bu sistem, akademik kadro ilanları oluşturma, başvuru yapma, jüri değerlendirmeleri ve başvuru sonuçlarının yönetilmesini sağlar.
+ Bu proje , Akademik personel başvuru sürecini dijital ortamda yönetmeyi amaçlayan bu sistem, akademik kadro ilanları oluşturma, başvuru yapma, jüri değerlendirmeleri ve başvuru sonuçlarının yönetilmesini sağlar.
 
 ## Proje Amacı
 
@@ -46,16 +45,12 @@ Sistem, dört temel kullanıcı rolüne sahiptir:
 2. Jüri üyeleri, her başvuru için kendi kişisel değerlendirme raporlarını oluşturmalıdır.
 3. Her jüri üyesi, olumlu/olumsuz değerlendirme yapmalıdır.
 
-## Teknik Gereksinimler
+## Kullanılan Teknolojiler
 
 - **Frontend:** React.js / Vue.js
 - **Backend:** Node.js (Express) veya Django
 - **Veritabanı:** PostgreSQL / MongoDB
-- **Kimlik Doğrulama:** JWT / OAuth 2.0
-- **Depolama:** AWS S3 veya Firebase Storage
-- **Bildirim Sistemi:** Twilio / Firebase
-- **API Entegrasyonları:** e-Devlet & Nüfus Müdürlüğü
-
+- 
 ## Fonksiyonel Gereksinimler
 <img width="397" alt="project-image-1" src="https://github.com/user-attachments/assets/3e7a3543-589c-4c61-b97e-e4bbe2f29656" />
 
@@ -85,15 +80,9 @@ Her bir akademik kadro için (Dr. Öğr. Üyesi, Doçent, Profesör) etkinlik ve
 6. Başvuru süresi tamamlandığında yönetici başvuru sayısı hakkında bilgilendirilir.
 7. Jüri üyeleri belirlenir ve değerlendirmelerini yaparak raporlarını sisteme yükler.
 8. Tüm jüri üyelerinin değerlendirmeleri tamamlandıktan sonra yönetici nihai kararı verir.
-![Uploading project-image-2.png…]()
+9. 
 ## Sonuç
-
 Bu proje, akademik personel başvurularını etkin şekilde yöneten bir sistem tasarımını içermektedir. Kullanıcı dostu arayüzü, ilan yönetimi, başvuru kriterleri belirleme, jüri değerlendirme süreci ve aday takibi gibi fonksiyonlarla akademik kadro alım süreçlerinin şeffaf ve düzenli bir şekilde yürütülmesine katkı sağlayacaktır.
 
-## Proje Teslim Tarihi
-
-Proje teslim tarihi: **20 Nisan 2025, Saat: 17.00**
-
-Proje GitHub platformuna yüklenmelidir. GitHub reponuzda README (beni oku) belgesini oluşturmalısınız.
 
 
