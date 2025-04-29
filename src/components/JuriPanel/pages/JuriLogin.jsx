@@ -1,13 +1,14 @@
+// JuriLogin.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './JuriLogin.css';
+import './JuriLogin.css'; // Add your CSS
 
 function JuriLogin() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
-  const navigate = useNavigate(); // Sayfa yönlendirmesi için hook
+  const navigate = useNavigate(); // Hook for page navigation
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,22 +26,21 @@ function JuriLogin() {
       });
 
       const data = await response.json();
-
       if (response.ok) {
-        setMessage(data.message); // Giriş başarılı mesajı
+        setMessage(data.message); // Display success message
 
-        // localStorage'a kullanıcı bilgilerini kaydediyoruz
-        localStorage.setItem('juriEmail', username); // Kullanıcı email'i
-        localStorage.setItem('jwtToken', data.token);  // Eğer JWT token kullanıyorsanız
+        // Save user data in localStorage
+        localStorage.setItem('juriEmail', username);
+        localStorage.setItem('juriAd', data.juri_ad);
 
-        // Yönlendirme
-        navigate('/juri-panel/dashboard'); // Yönlendirme
+        // Redirect to the dashboard after successful login
+        navigate('/juri-panel/dashboard');
       } else {
-        setMessage(data.message); // Hatalı giriş mesajı
+        setMessage(data.message); // Show error message
       }
     } catch (error) {
       setMessage('Bir hata oluştu.');
-      console.error('İstek hatası:', error);
+      console.error('Error occurred:', error);
     }
   };
 

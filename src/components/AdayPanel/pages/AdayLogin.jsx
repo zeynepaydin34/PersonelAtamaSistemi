@@ -19,7 +19,7 @@ function AdayLogin() {
         sifre: password,
       });
 
-      // ✅ Aday ID'yi localStorage'a kaydet
+      //  Aday ID'yi localStorage'a kaydet
       localStorage.setItem('aday_id', response.data.aday_id);
 
       // Başarı mesajı göster ve yönlendir

@@ -4,6 +4,7 @@ const { Pool } = pkg;
 
 const router = express.Router();
 
+// Veritabanı bağlantısı
 const db = new Pool({
   user: 'postgres',
   host: 'localhost',
@@ -12,40 +13,25 @@ const db = new Pool({
   port: 5432,
 });
 
-router.get('/:email', async (req, res) => {
-  const { email } = req.params;
-
+// TÜM JÜRİLER İÇİN TÜM BAŞVURULARI GETİR
+router.get('/', async (req, res) => {
   try {
-    // SQL sorgusu
-    const query = `
+    const result = await db.query(`
       SELECT 
-        a.aday_id,
-        a.aday_isim,
-        a.aday_soyisim,
-        i.ilan_baslik,
-        b.basvuru_durum,
-        bb.belge_dosya
-      FROM juri_ilan_atama jia
-      JOIN ilan i ON jia.ilan_id = i.ilan_id
-      JOIN basvuru b ON b.ilan_id = i.ilan_id
-      JOIN aday a ON a.aday_id = b.aday_id
-      LEFT JOIN basvuru_belge bb ON b.basvuru_id = bb.basvuru_id
-      WHERE a.aday_email = $1
-    `;
+        aday.aday_isim, 
+        aday.aday_soyisim, 
+        basvuru.basvuru_id,
+        belge.belge_dosya
+      FROM 
+        basvuru
+      JOIN aday ON basvuru.aday_id = aday.aday_id
+      LEFT JOIN basvuru_belge belge ON belge.basvuru_id = basvuru.basvuru_id
+    `);
 
-    // Sorguyu çalıştırıyoruz
-    const result = await db.query(query, [email]);
-
-    // Sonuçları döndürüyoruz
-    res.status(200).json(result.rows);
+    res.json(result.rows); // result.rows şeklinde dönüyoruz!
   } catch (error) {
-    // Hata durumunda detaylı loglama
-    console.error('Sunucu Hatası:', error);  // Hata objesinin tamamını konsola yazdırıyoruz
-    res.status(500).json({
-      message: 'Bir hata oluştu.',
-      error: error.message,   // Hata mesajını daha detaylı olarak döndürüyoruz
-      stack: error.stack      // Hata yığın izini (stack trace) de döndürebiliriz
-    });
+    console.error('Başvurular alınırken hata oluştu:', error);
+    res.status(500).json({ message: 'Başvurular alınamadı.' });
   }
 });
 

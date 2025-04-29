@@ -80,7 +80,7 @@ const ShowAnnouncement = () => {
 
             <div style={{ marginLeft: '250px', padding: '20px', flex: 1 }}>
                 <h2>İlan Listesi</h2>
-                <table className="announcement-table" style={{ width: '100%', borderCollapse: 'collapse' }}>
+                <table className="announcement-lists-table" style={{ width: '100%', borderCollapse: 'collapse' }}>
                     <thead>
                         <tr>
                             <th style={{ border: '1px solid #ddd', padding: '8px' }}>İlan Başlık</th>

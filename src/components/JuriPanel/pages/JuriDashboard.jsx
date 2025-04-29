@@ -73,8 +73,6 @@ const Dashboard = () => {
                                 <th>İlan Adı</th>
                                 <th>Başlangıç Tarihi</th>
                                 <th>Bitiş Tarihi</th>
-                                <th>Başvuru Sayısı</th>
-                                <th>Toplam Başvuru</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -83,8 +81,6 @@ const Dashboard = () => {
                                     <td>{ilan.name}</td>
                                     <td>{ilan.startDate}</td>
                                     <td>{ilan.endDate}</td>
-                                    <td>{ilan.applicationCount}</td>
-                                    <td>{ilan.remainingDays}</td>
                                 </tr>
                             ))}
                         </tbody>

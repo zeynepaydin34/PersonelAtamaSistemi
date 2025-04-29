@@ -52,7 +52,7 @@ const Dashboard = () => {
                         <p>{ilanlar.length}</p> {/* Toplam ilan sayısını dinamik olarak göster */}
                     </div>
                     <div className="card">
-                        <h3>Onay Bekleyen İlanlar</h3>
+                        <h3>Onay Bekleyen Adaylar</h3>
                         <p>{ilanlar.filter(ilan => ilan.onayDurum === 'Beklemede').length}</p> {/* Örnek: Beklemede olan ilanlar */}
                     </div>
                     <div className="card">

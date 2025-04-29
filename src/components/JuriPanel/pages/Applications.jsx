@@ -3,49 +3,39 @@ import axios from 'axios';
 import Sidebar from './Sidebar';
 
 const Applications = () => {
-  const [basvurular, setBasvurular] = useState([]);
+  const [applications, setApplications] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const juriEmail = localStorage.getItem('juriEmail'); // Getting email from localStorage
 
-  console.log('Juri Email:', juriEmail); // Check if the email is retrieved from localStorage
-
+  // Use a general approach, no need for the jury email in this case
   useEffect(() => {
-    if (!juriEmail) {
-      setLoading(false);
-      setError('Giriş yapmadınız!'); // No email found in localStorage
-      return;
-    }
-
-    const fetchData = async () => {
+    const fetchApplications = async () => {
       try {
-        console.log('Fetching data for email:', juriEmail); // Log the email used in the API request
-        const response = await axios.get(`http://localhost:5001/api/juriBasvurular/${juriEmail}`);
-        console.log('Response Data:', response.data); // Log the response data
-        setBasvurular(response.data);
-        setLoading(false); // Stop loading
-      } catch (error) {
+        const response = await axios.get('http://localhost:5001/api/juriBasvurular');
+        setApplications(response.data);
+      } catch (err) {
+        console.error('Veri çekme hatası:', err);
+        setError(err.response?.data?.message || 'Veri alınırken hata oluştu!');
+      } finally {
         setLoading(false);
-        setError(error.response ? error.response.data.message : 'Veri alınırken hata oluştu!');
-        console.error('Error while fetching data:', error); // Log the error
       }
     };
 
-    fetchData();
-  }, [juriEmail]);
+    fetchApplications();
+  }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
+  if (loading) return <div>Yükleniyor...</div>;
+  if (error) return <div style={{ color: 'red' }}>{error}</div>;
 
   return (
-    <div>
+    <div style={{ display: 'flex' }}>
       <Sidebar />
-      <div className="content">
-        <h2>Size Atanan Başvurular</h2>
-        {basvurular.length === 0 ? (
-          <p>Atanan başvuru bulunamadı.</p>
+      <div className="content" style={{ padding: '20px', flex: 1 }}>
+        <h2>Başvurular</h2>
+        {applications.length === 0 ? (
+          <p>Başvuru bulunamadı.</p>
         ) : (
-          <table>
+          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
             <thead>
               <tr>
                 <th>Ad</th>
@@ -56,17 +46,21 @@ const Applications = () => {
               </tr>
             </thead>
             <tbody>
-              {basvurular.map((item, i) => (
-                <tr key={i}>
-                  <td>{item.aday_isim}</td>
-                  <td>{item.aday_soyisim}</td>
-                  <td>{item.ilan_baslik}</td>
+              {applications.map((app, index) => (
+                <tr key={index}>
+                  <td>{app.aday_isim}</td>
+                  <td>{app.aday_soyisim}</td>
+                  <td>{app.ilan_baslik}</td>
                   <td>
-                    {item.belge_dosya ? (
-                      <a href={`http://localhost:5001/uploads/${item.belge_dosya}`} target="_blank" rel="noreferrer">Görüntüle</a>
-                    ) : 'Belge Yok'}
+                    {app.belge_dosya ? (
+                      <a href={`http://localhost:5001/uploads/${app.belge_dosya}`} target="_blank" rel="noopener noreferrer">
+                        Görüntüle
+                      </a>
+                    ) : (
+                      'Belge Yok'
+                    )}
                   </td>
-                  <td>{item.basvuru_durum}</td>
+                  <td>{app.basvuru_durum}</td>
                 </tr>
               ))}
             </tbody>

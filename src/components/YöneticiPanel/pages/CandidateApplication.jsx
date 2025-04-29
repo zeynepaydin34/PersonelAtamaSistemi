@@ -42,10 +42,10 @@ const CandidateApplication = () => {
       <Sidebar />
       <div className="content">
         <h2>Aday Başvuruları</h2>
-        <table class>
+        <table className="applications-table">
           <thead>
             <tr>
-              <th>İlan Başlığı</th>
+              {/* İlan Başlığı sütununu kaldırdık */}
               <th>Aday İsim</th>
               <th>Aday Soyisim</th>
               <th>Başvuru Durumu</th>
@@ -56,7 +56,7 @@ const CandidateApplication = () => {
           <tbody>
             {applications.map((application, index) => (
               <tr key={index}>
-                <td>{application.ilan_baslik}</td>
+                {/* İlan Başlığı hücresini kaldırdık */}
                 <td>{application.aday_isim}</td>
                 <td>{application.aday_soyisim}</td>
                 <td>{application.basvuru_durum || 'Belirtilmemiş'}</td>

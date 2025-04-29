@@ -18,19 +18,16 @@ router.get('/', async (req, res) => {
     console.log("GET isteği alındı");
 
     const query = `
-      SELECT 
-        b.basvuru_id,
-        i.ilan_baslik, 
-        a.aday_isim, 
-        a.aday_soyisim, 
-        b.basvuru_durum, 
-        d.rapor
-      FROM basvuru b
-      LEFT JOIN ilan i ON b.ilan_id = i.ilan_id
-      LEFT JOIN aday a ON b.aday_id = a.aday_id
-      LEFT JOIN degerlendirme d ON b.basvuru_id = d.basvuru_id;
-    `;
-
+    SELECT 
+      b.basvuru_id,
+      a.aday_isim, 
+      a.aday_soyisim, 
+      b.basvuru_durum, 
+      d.rapor
+    FROM basvuru b
+    LEFT JOIN aday a ON b.aday_id = a.aday_id
+    LEFT JOIN degerlendirme d ON b.basvuru_id = d.basvuru_id;
+  `;
     const result = await db.query(query);
 
     if (result.rows.length === 0) {

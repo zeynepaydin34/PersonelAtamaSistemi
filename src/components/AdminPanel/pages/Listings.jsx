@@ -1,69 +1,63 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './Listings.css';
 import Sidebar from './Sidebar';
-import axios from 'axios';
 
 const Listings = () => {
-  const [listings, setListings] = useState([]);
+  const [basvurular, setBasvurular] = useState([]);
+  const [error, setError] = useState('');
+  const [redirectStatus, setRedirectStatus] = useState({}); // Yönlendirme durumunu saklamak için
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:5001/api/basvuruListesi');
-        setListings(response.data);
-      } catch (error) {
-        console.error('Veri alınırken bir hata oluştu:', error);
-      }
-    };
-
-    fetchData();
+    // Başvuru verilerini çekiyoruz
+    axios.get('http://localhost:5001/api/basvuruListesi')
+      .then(response => {
+        setBasvurular(response.data);
+      })
+      .catch(err => {
+        setError('Veriler alınamadı.');
+        console.error(err);
+      });
   }, []);
 
+  const handleRedirect = (basvuruId) => {
+    // Yönlendirme işlemi burada
+    setRedirectStatus(prevState => ({
+      ...prevState,
+      [basvuruId]: 'Yönlendirildi' // Yönlendirme mesajını ekliyoruz
+    }));
+  };
+
   return (
-    <div className="listings">
+    <div>
       <Sidebar />
-      <div className="content-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Ad</th>
-              <th>Soyad</th>
-              <th>İlan Başlığı</th>
-              <th>Belge</th>
-              <th>Başvuru Durumu</th>
-              <th>Yönlendir</th>
+      {error && <p>{error}</p>}
+      <table className='listings-table'>
+        <thead>
+          <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Başvuru Durumu</th>
+            <th>Yönlendir</th>
+          </tr>
+        </thead>
+        <tbody>
+          {basvurular.map((basvuru) => (
+            <tr key={basvuru.basvuru_id}>
+              <td>{basvuru.aday_isim}</td>  {/* Ad */}
+              <td>{basvuru.aday_soyisim}</td>  {/* Soyad */}
+              <td>{basvuru.basvuru_durum}</td>
+              <td>
+                <button onClick={() => handleRedirect(basvuru.basvuru_id)}>
+                  {redirectStatus[basvuru.basvuru_id] || 'Yönlendir'} {/* Yönlendirilmişse yazıyı değiştir */}
+                </button>
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {listings.map((listing, index) => (
-              <tr key={index}>
-                <td>{listing.aday_isim}</td>
-                <td>{listing.aday_soyisim}</td>
-                <td>{listing.ilan_baslik}</td>
-                <td>
-                  {listing.belge_dosya ? (
-                    <a href={`http://localhost:5001/uploads/${listing.belge_dosya}`} target="_blank" rel="noopener noreferrer">
-                      Belgeyi Görüntüle
-                    </a>
-                  ) : (
-                    'Belge Yok'
-                  )}
-                </td>
-                <td>{listing.basvuru_durum}</td>
-                <td>
-                  <button className="redirect-button" onClick={() => handleRedirect(listing.aday_id)}>Yönlendir</button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
-};
-
-const handleRedirect = (adayId) => {
-  console.log(`Aday ID: ${adayId}`);
 };
 
 export default Listings;
