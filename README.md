@@ -91,4 +91,5 @@ Her bir akademik kadro için (Dr. Öğr. Üyesi, Doçent, Profesör) etkinlik ve
 Bu proje, akademik personel başvurularını etkin şekilde yöneten bir sistem tasarımını içermektedir. Kullanıcı dostu arayüzü, ilan yönetimi, başvuru kriterleri belirleme, jüri değerlendirme süreci ve aday takibi gibi fonksiyonlarla akademik kadro alım süreçlerinin şeffaf ve düzenli bir şekilde yürütülmesine katkı sağlayacaktır.
 
 ## Proje Raporu
-[Grup25_ProjeRaporu.odt](https://github.com/user-attachments/files/19976087/Grup25_ProjeRaporu.odt)
+-
+[Grup25_ProjeRaporu  (1).odt](https://github.com/user-attachments/files/20002393/Grup25_ProjeRaporu.1.odt)
